@@ -35,7 +35,6 @@ public class SeleniumTestMain {
         inputTextField = wait.until(visibilityOfElementLocated(By.cssSelector("input[id=\"text\"]")));
         searchButton = wait.until(visibilityOfElementLocated(By.cssSelector("div.search2__button button")));
 
-        inputTextField.clear();
         inputTextField.sendKeys(searchQuery);
 
         searchButton.click();
