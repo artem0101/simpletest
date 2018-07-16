@@ -49,7 +49,7 @@ public class SeleniumTestMain {
 
         ArrayList<String> wordsFromSearchQuery = new ArrayList<>(Arrays.asList(searchQuery.split("\\s")));
 
-        wordFromLink = " 1 2 43 погода в пензе";
+        wordFromLink = searchLinkText.getText().toLowerCase();
 
         // используя этот вариант можено определить есть какое слово из запроса есть в тексте ссылки, а какое нет
         wordsFromSearchQuery.forEach(word -> {
