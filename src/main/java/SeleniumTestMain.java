@@ -52,17 +52,19 @@ public class SeleniumTestMain {
         wordFromLink = searchLinkText.getText().toLowerCase();
 
         // используя этот вариант можено определить есть какое слово из запроса есть в тексте ссылки, а какое нет
-        wordsFromSearchQuery.forEach(word -> {
-            try {
-                Assert.assertTrue(wordFromLink.contains(word));
-                System.out.println("Слово из запроса \"" + word + "\" есть в первой ссылке.");
-            } catch (AssertionError e) {
-                System.out.println("Слово из запроса \"" + word + "\" нет в первой ссылке.");
-            }
-        });
+//        wordsFromSearchQuery.forEach(word -> {
+//            try {
+//                Assert.assertTrue(wordFromLink.contains(word));
+//                System.out.println("Слово из запроса \"" + word + "\" есть в первой ссылке.");
+//            } catch (AssertionError e) {
+//                System.out.println("Слово из запроса \"" + word + "\" нет в первой ссылке.");
+//            }
+//        });
 
         // решение умещается в строку, но прекращает работу когда слово находится - падает в ошибку, тем самым завершив тест
-        wordsFromSearchQuery.forEach(word -> Assert.assertFalse(wordFromLink.contains(word), "Слово из запроса \"" + word + "\" есть в первой ссылке."));
+//        wordsFromSearchQuery.forEach(word -> Assert.assertFalse(wordFromLink.contains(word), "Слово из запроса \"" + word + "\" есть в первой ссылке."));
+
+        Assert.assertTrue(wordFromLink.contains("погода"));
     }
 
     @AfterClass
