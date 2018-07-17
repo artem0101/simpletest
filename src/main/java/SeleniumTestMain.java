@@ -5,16 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.stalenessOf;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class SeleniumTestMain {
@@ -50,19 +47,6 @@ public class SeleniumTestMain {
         ArrayList<String> wordsFromSearchQuery = new ArrayList<>(Arrays.asList(searchQuery.split("\\s")));
 
         wordFromLink = searchLinkText.getText().toLowerCase();
-
-        // используя этот вариант можено определить есть какое слово из запроса есть в тексте ссылки, а какое нет
-//        wordsFromSearchQuery.forEach(word -> {
-//            try {
-//                Assert.assertTrue(wordFromLink.contains(word));
-//                System.out.println("Слово из запроса \"" + word + "\" есть в первой ссылке.");
-//            } catch (AssertionError e) {
-//                System.out.println("Слово из запроса \"" + word + "\" нет в первой ссылке.");
-//            }
-//        });
-
-        // решение умещается в строку, но прекращает работу когда слово находится - падает в ошибку, тем самым завершив тест
-//        wordsFromSearchQuery.forEach(word -> Assert.assertFalse(wordFromLink.contains(word), "Слово из запроса \"" + word + "\" есть в первой ссылке."));
 
         Assert.assertTrue(wordFromLink.contains("погода"));
     }
