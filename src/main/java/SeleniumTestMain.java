@@ -9,9 +9,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class SeleniumTestMain {
@@ -22,7 +19,6 @@ public class SeleniumTestMain {
     private WebElement searchLinkText;
     private String wordFromLink;
     private final String searchQuery = "погода пенза";
-    private static ArrayList<String> missingWords = new ArrayList<>();
 
     @BeforeClass
     public void setup() {
