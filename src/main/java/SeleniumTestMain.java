@@ -44,8 +44,6 @@ public class SeleniumTestMain {
 
         searchLinkText = wait.until(visibilityOfElementLocated(By.cssSelector("li[data-cid=\"0\"] div.organic__url-text")));
 
-        ArrayList<String> wordsFromSearchQuery = new ArrayList<>(Arrays.asList(searchQuery.split("\\s")));
-
         wordFromLink = searchLinkText.getText().toLowerCase();
 
         Assert.assertTrue(wordFromLink.contains("погода"));
