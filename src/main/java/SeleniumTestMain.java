@@ -37,7 +37,7 @@ public class SeleniumTestMain {
     }
 
     @Test
-    public void searchWeather() throws Exception {
+    public void searchWeather() {
         inputTextField = wait.until(visibilityOfElementLocated(By.cssSelector("input[id=\"text\"]")));
         searchButton = wait.until(visibilityOfElementLocated(By.cssSelector("div.search2__button button")));
 
