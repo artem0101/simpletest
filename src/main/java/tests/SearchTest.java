@@ -19,7 +19,6 @@ public class SearchTest extends BaseTest {
 
     @Test
     public void searchWeather() {
-        driver.get("https://www.yandex.ru/");
 
         searchPage.search(searchQuery);
 

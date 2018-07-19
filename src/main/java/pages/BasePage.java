@@ -10,6 +10,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        driver.get("https://www.yandex.ru/");
     }
 
     public void waitForElement(By locator) {
