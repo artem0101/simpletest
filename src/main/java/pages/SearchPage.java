@@ -12,6 +12,7 @@ public class SearchPage extends BasePage {
     public SearchPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
+        driver.get("https://www.yandex.ru/");
     }
 
     public void search(String text) {
