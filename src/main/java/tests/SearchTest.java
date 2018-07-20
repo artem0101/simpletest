@@ -17,7 +17,7 @@ public class SearchTest extends BaseTest {
     public void setupChromeDriver() {
         super.setupChromeDriver();
         searchPage = PageFactory.initElements(driver, SearchPage.class);
-        resultPage = PageFactory.initElements(driver,ResultPage.class);
+        resultPage = PageFactory.initElements(driver, ResultPage.class);
     }
 
     @Test
