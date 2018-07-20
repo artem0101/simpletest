@@ -10,12 +10,12 @@ import pages.SearchPage;
 public class SearchTest extends BaseTest {
     private static SearchPage searchPage;
     private static ResultPage resultPage;
-    private final String searchQuery = "погода пенза";
+    private final String SEARCH_QUERY = "погода пенза";
 
     @BeforeClass
     @Override
-    public void setup() {
-        super.setup();
+    public void setupChromeDriver() {
+        super.setupChromeDriver();
         searchPage = PageFactory.initElements(driver, SearchPage.class);
         resultPage = PageFactory.initElements(driver,ResultPage.class);
     }
@@ -23,7 +23,7 @@ public class SearchTest extends BaseTest {
     @Test
     public void searchWeather() {
 
-        searchPage.search(searchQuery);
+        searchPage.search(SEARCH_QUERY);
 
         Assert.assertTrue(resultPage.readText().toLowerCase().contains("погода"));
     }

@@ -12,7 +12,7 @@ public class BaseTest {
     protected WebDriver driver;
 
     @BeforeClass
-    public void setup() {
+    public void setupChromeDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
