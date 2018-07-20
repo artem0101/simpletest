@@ -11,6 +11,7 @@ public class SearchTest extends BaseTest {
     private static SearchPage searchPage;
     private static ResultPage resultPage;
     private final String SEARCH_QUERY = "погода пенза";
+    private final String SEARCH_WORD = "погода";
 
     @BeforeClass
     @Override
@@ -25,6 +26,7 @@ public class SearchTest extends BaseTest {
 
         searchPage.search(SEARCH_QUERY);
 
-        Assert.assertTrue(resultPage.readText().toLowerCase().contains("погода"));
+        Assert.assertTrue(resultPage.readText().toLowerCase().contains(SEARCH_WORD));
+
     }
 }
