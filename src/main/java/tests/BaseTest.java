@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    protected WebDriver driver;
+    WebDriver driver;
 
     @BeforeClass
     public void setupChromeDriver() {

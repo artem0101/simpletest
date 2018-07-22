@@ -23,14 +23,10 @@ public class SearchPage extends BasePage {
     }
 
     public ArrayList<String> getElements() {
-        ArrayList<String> textLabels = new ArrayList<>();
-        if (!textLabels.isEmpty()) textLabels.clear();
 
         clickByElement(LINK_MORE_CSS);
 
-        textLabels.addAll(getChildrenElements(TAB_MORE_CSS));
-
-        return textLabels;
+        return new ArrayList<>(getChildrenElements(TAB_MORE_CSS));
     }
 
     public void clickOnCurrentLocation() {
