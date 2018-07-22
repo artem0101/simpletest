@@ -24,7 +24,7 @@ public class SearchTest extends BaseTest {
     @Test
     public void searchWeather() {
 
-        searchPage.search(SEARCH_QUERY);
+        searchPage.searchQuestion(SEARCH_QUERY);
 
         Assert.assertTrue(resultPage.readText().toLowerCase().contains(SEARCH_WORD));
 
