@@ -23,7 +23,6 @@ public class CompareMoreTest extends BaseTest {
         super.setupChromeDriver();
         searchPage = PageFactory.initElements(driver, SearchPage.class);
         locationPage = PageFactory.initElements(driver, LocationPage.class);
-//        driver.get("https://www.yandex.by/");
     }
 
     @Test
