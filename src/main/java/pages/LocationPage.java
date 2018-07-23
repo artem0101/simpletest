@@ -15,8 +15,8 @@ public class LocationPage extends BasePage {
     public void searchCity(String country, String city) {
         clearInputField(INPUT_SEARCH_CITY_CSS);
         sendKeysByElement(INPUT_SEARCH_CITY_CSS, city);
-        if (POPUP_LONDON_CSS.toString().equals(country)) clickByElement(POPUP_LONDON_CSS);
-        else if (POPUP_PARIS_CSS.toString().equals(country)) clickByElement(POPUP_PARIS_CSS);
+        if (POPUP_LONDON_CSS.toString().contains(country)) clickByElement(POPUP_LONDON_CSS);
+        else if (POPUP_PARIS_CSS.toString().contains(country)) clickByElement(POPUP_PARIS_CSS);
     }
 }
 
