@@ -27,16 +27,18 @@ public class CompareMoreTest extends BaseTest {
 
     @Test
     public void coincidenceOfElements() {
+        ArrayList<String> elementsForLondon;
+        ArrayList<String> elementsForParis;
 
-         Assert.assertTrue(getResult(COUNTRY_UK, CITY_LONDON).containsAll(getResult(COUNTRY_FRANCE, CITY_PARIS)));
-
-    }
-
-    private ArrayList<String> getResult( String country, String city) {
         searchPage.clickOnCurrentLocation();
+        locationPage.searchCity(COUNTRY_UK, CITY_LONDON);
+        elementsForLondon = new ArrayList<>(searchPage.getElements());
 
-        locationPage.searchCity(country, city);
+        searchPage.clickOnCurrentLocation();
+        locationPage.searchCity(COUNTRY_FRANCE, CITY_PARIS);
+        elementsForParis = new ArrayList<>(searchPage.getElements());
 
-        return new ArrayList<>(searchPage.getElements());
+        Assert.assertTrue(elementsForLondon.containsAll(elementsForParis));
+
     }
 }

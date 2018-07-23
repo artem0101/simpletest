@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import java.util.ArrayList;
 
 public class SearchPage extends BasePage {
@@ -26,7 +28,7 @@ public class SearchPage extends BasePage {
 
         clickByElement(LINK_MORE_CSS);
 
-        return new ArrayList<>(getChildrenElements(TAB_MORE_CSS));
+        return new ArrayList<>(getTextFromElements(TAB_MORE_CSS));
     }
 
     public void clickOnCurrentLocation() {
