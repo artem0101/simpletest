@@ -28,7 +28,7 @@ public class SearchPage extends BasePage {
 
         clickByElement(LINK_MORE_CSS);
 
-        return new ArrayList<>(getTextFromElements(TAB_MORE_CSS));
+        return new ArrayList<String>(getTextFromElements(TAB_MORE_CSS));
     }
 
     public void clickOnCurrentLocation() {
