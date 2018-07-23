@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 
@@ -24,7 +23,7 @@ public class SearchPage extends BasePage {
         clickByElement(BUTTON_SEARCH_CSS);
     }
 
-    public ArrayList<String> getElements() {
+    public ArrayList<String> getTextListFromMore() {
 
         clickByElement(LINK_MORE_CSS);
 

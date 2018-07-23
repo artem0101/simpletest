@@ -32,11 +32,11 @@ public class CompareMoreTest extends BaseTest {
 
         searchPage.clickOnCurrentLocation();
         locationPage.searchCity(COUNTRY_UK, CITY_LONDON);
-        elementsForLondon = new ArrayList<String>(searchPage.getElements());
+        elementsForLondon = new ArrayList<String>(searchPage.getTextListFromMore());
 
         searchPage.clickOnCurrentLocation();
         locationPage.searchCity(COUNTRY_FRANCE, CITY_PARIS);
-        elementsForParis = new ArrayList<String>(searchPage.getElements());
+        elementsForParis = new ArrayList<String>(searchPage.getTextListFromMore());
 
         Assert.assertTrue(elementsForLondon.containsAll(elementsForParis));
 
