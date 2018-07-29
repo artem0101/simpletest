@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.LocationPage;
 import pages.SearchPage;
-
 import java.util.ArrayList;
 
 public class CompareMoreTest extends BaseTest {
