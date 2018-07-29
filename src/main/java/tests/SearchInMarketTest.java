@@ -21,8 +21,8 @@ public class SearchInMarketTest extends BaseTest {
     }
 
     @Test
-    public void seeLaptops() throws InterruptedException {
-        marketPage.laptops();
+    public void seeTablets() throws InterruptedException {
+        marketPage.tabletsCheck();
 
         int twelveElements = tabletsPage.countTablets("Показывать по 12");
         int fortyEightElements = tabletsPage.countTablets("Показывать по 48");

@@ -19,7 +19,7 @@ public class SortedTest extends BaseTest {
     }
 
     @Test
-    public void calc() throws InterruptedException {
+    public void sortingCheck() throws InterruptedException {
 
         Assert.assertTrue(tabletsPage.isSorted());
 
