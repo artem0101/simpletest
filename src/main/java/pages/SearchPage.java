@@ -11,9 +11,18 @@ public class SearchPage extends BasePage {
     private final By LINK_MORE_CSS = By.cssSelector("a[data-statlog=\"tabs.more\"]");
     private final By TEXT_CURRENT_LOCATION = By.cssSelector("a[data-statlog=\"head.region.setup\"]");
 
+    private final By LINK_VIDEO = By.cssSelector("a[data-id=\"video\"]");
+    private final By LINK_PICTURES = By.cssSelector("a[data-id=\"images\"]");
+    private final By LINK_NEWS = By.cssSelector("a[data-id=\"news\"]");
+    private final By LINK_MAPS = By.cssSelector("a[data-id=\"maps\"]");
+    private final By LINK_MARKET = By.cssSelector("a[data-id=\"market\"]");
+    private final By LINK_TRANSLATE = By.cssSelector("a[data-id=\"translate\"]");
+    private final By LINK_NUSIC = By.cssSelector("a[data-id=\"music\"]");
+    private static String currentURL;
+
     public SearchPage(WebDriver driver) {
         super(driver);
-        driver.get("https://www.yandex.by/");
+        driver.get("https://www.yandex.ru/");
     }
 
     public void searchQuestion(String text) {
@@ -31,5 +40,39 @@ public class SearchPage extends BasePage {
 
     public void clickOnCurrentLocation() {
         clickByElement(TEXT_CURRENT_LOCATION);
+    }
+
+    public String checkTheTransition(String value) {
+        currentURL = null;
+        switch (value) {
+            case "Видео":
+                toCheck(LINK_VIDEO);
+                break;
+            case "Картинки":
+                toCheck(LINK_PICTURES);
+                break;
+            case "Новости":
+                toCheck(LINK_NEWS);
+                break;
+            case "Карты":
+                toCheck(LINK_MAPS);
+                break;
+            case "Маркет":
+                toCheck(LINK_MARKET);
+                break;
+            case "Переводчик":
+                toCheck(LINK_TRANSLATE);
+                break;
+            case "Музыка":
+                toCheck(LINK_NUSIC);
+                break;
+        }
+        return currentURL;
+    }
+
+    private void toCheck(By locator) {
+        clickByElement(locator);
+        currentURL = getCurrentURL();
+        toBack();
     }
 }

@@ -94,4 +94,8 @@ class BasePage {
 
         return driver.findElement(locator).getText();
     }
+
+    void toBack() {
+        driver.navigate().back();
+    }
 }
