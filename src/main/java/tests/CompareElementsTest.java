@@ -2,7 +2,6 @@ package tests;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.ComparePage;
@@ -24,7 +23,7 @@ public class CompareElementsTest extends BaseTest {
     }
 
     @Test
-    public void addElements() throws InterruptedException {
+    public void compareElements() throws InterruptedException {
         ArrayList<String> titlesFromTablets = tabletsPage.compared(1, 2);
         ArrayList<String> titlesFromCompare = comparePage.inCompare();
 

@@ -2,7 +2,6 @@ package tests;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.MarketPage;
@@ -31,11 +30,5 @@ public class SearchInMarketTest extends BaseTest {
         Assert.assertEquals(12, twelveElements);
         Assert.assertEquals(48, fortyEightElements);
 
-    }
-
-    @AfterClass
-    @Override
-    public void tearDown() {
-//        super.tearDown();
     }
 }
