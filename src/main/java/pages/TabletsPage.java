@@ -23,9 +23,7 @@ public class TabletsPage extends BasePage {
     }
 
 
-    public int countTablets(String value) throws InterruptedException {
-        System.out.println("In TabletsPages " + value);
-
+    public int changeCountOfDisplayedTablets(String value) throws InterruptedException {
         scroll(LISTBOX_BUTTON);
         clickByElement(LISTBOX_BUTTON);
 
@@ -35,15 +33,18 @@ public class TabletsPage extends BasePage {
         return countElements(COUNTAINS_ELEMENT);
     }
 
-    public boolean isSorted() throws InterruptedException {
+    public ArrayList<WebElement> sortedTablets() throws InterruptedException {
         clickByElement(LINK_OF_PRICE);
         Thread.sleep(10000);
 
-        ArrayList<WebElement> referElements = returnContainsElement(LABEL_OF_PRICE);
-        int[] arr = new int[referElements.size()];
+        return returnContainsElement(LABEL_OF_PRICE);
+    }
 
-        for (int i = 0; i < referElements.size(); i++) {
-            arr[i] = Integer.parseInt(referElements.get(i).getText().replaceAll("[\\s\u20BD]", ""));
+    public boolean compareSortedTablets(ArrayList<WebElement> elements) {
+        int[] arr = new int[elements.size()];
+
+        for (int i = 0; i < elements.size(); i++) {
+            arr[i] = Integer.parseInt(elements.get(i).getText().replaceAll("[\\s\u20BD]", ""));
         }
 
         for (int i = 1; i < arr.length; i++) {
@@ -57,7 +58,7 @@ public class TabletsPage extends BasePage {
         return true;
     }
 
-    public ArrayList<String> compared(int i, int j) {
+    public ArrayList<String> addTabletsToCompare(int i, int j) {
         ArrayList<WebElement> addToCompareButtons = returnContainsElement(BUTTON_COMPARE);
         ArrayList<String> titles = new ArrayList<>();
 
@@ -70,7 +71,12 @@ public class TabletsPage extends BasePage {
 
         clickByElement(BUTTON_TO_COMPARE);
 
-
         return titles;
     }
+
+    @Override
+    public String getCurrentURL() {
+        return super.getCurrentURL();
+    }
+
 }

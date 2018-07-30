@@ -16,7 +16,7 @@ public class ComparePage extends BasePage {
         super(driver);
     }
 
-    public ArrayList<String> inCompare() {
+    public ArrayList<String> getTabletsFromCompare() {
         ArrayList<WebElement> webElementsTitles = returnContainsElement(TITLES_LABEL);
         ArrayList<String> titles = new ArrayList<>();
 

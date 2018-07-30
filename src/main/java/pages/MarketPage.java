@@ -12,7 +12,7 @@ public class MarketPage extends BasePage {
         driver.get("https://market.yandex.ru/");
     }
 
-    public void tabletsCheck() throws InterruptedException {
+    public void chouiceSubgroupTablets() throws InterruptedException {
 
         moveByElement(TOP_MENU);
 

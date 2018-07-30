@@ -22,10 +22,10 @@ public class SearchInMarketTest extends BaseTest {
 
     @Test
     public void seeTablets() throws InterruptedException {
-        marketPage.tabletsCheck();
+        marketPage.chouiceSubgroupTablets();
 
-        int twelveElements = tabletsPage.countTablets("Показывать по 12");
-        int fortyEightElements = tabletsPage.countTablets("Показывать по 48");
+        int twelveElements = tabletsPage.changeCountOfDisplayedTablets("Показывать по 12");
+        int fortyEightElements = tabletsPage.changeCountOfDisplayedTablets("Показывать по 48");
 
         Assert.assertEquals(12, twelveElements);
         Assert.assertEquals(48, fortyEightElements);
