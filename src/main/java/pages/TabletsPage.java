@@ -18,23 +18,33 @@ public class TabletsPage extends BasePage {
     private final By BUTTON_TO_COMPARE = By.cssSelector("a[href=\"/compare?track=head\"]");
     private final By TITLE_LIST = By.cssSelector("div[class*=\"n-snippet-card2__title\"] a[title*=\"Планшет\"]");
 
+    private static ArrayList<String> titlesOfTablets = new ArrayList<>();
+
     public TabletsPage(WebDriver driver) {
         super(driver);
     }
 
 
-    public int changeCountOfDisplayedTablets(String value) throws InterruptedException {
+    public void changeCountOfDisplayedTablets(String value)  {
         scroll(LISTBOX_BUTTON);
         clickByElement(LISTBOX_BUTTON);
 
         select(SELECT_CONTROL, value);
+    }
+
+
+    public int getCountTablets() throws InterruptedException {
         Thread.sleep(10000);
 
         return countElements(COUNTAINS_ELEMENT);
     }
 
-    public ArrayList<String> sortedTablets() throws InterruptedException {
+    public void sortedTablets()  {
         clickByElement(LINK_OF_PRICE);
+
+    }
+
+    public ArrayList<String> getSortedTablets() throws InterruptedException {
         Thread.sleep(10000);
 
         return getTextFromElements(LABEL_OF_PRICE);
@@ -58,20 +68,21 @@ public class TabletsPage extends BasePage {
         return true;
     }
 
-    public ArrayList<String> addTabletsToCompare(int i, int j) {
+    public void addTabletsToCompare(int i, int j) {
         ArrayList<WebElement> addToCompareButtons = returnContainsElement(BUTTON_COMPARE);
-        ArrayList<String> titles = new ArrayList<>();
 
         clickByElement(addToCompareButtons.get(i - 1));
         clickByElement(addToCompareButtons.get(j - 1));
 
-        titles.add(returnContainsElement(TITLE_LIST).get(i - 1).getText());
-        titles.add(returnContainsElement(TITLE_LIST).get(j - 1).getText());
+        titlesOfTablets.add(returnContainsElement(TITLE_LIST).get(i - 1).getText());
+        titlesOfTablets.add(returnContainsElement(TITLE_LIST).get(j - 1).getText());
 
 
         clickByElement(BUTTON_TO_COMPARE);
+    }
 
-        return titles;
+    public ArrayList<String> getTitlesOfTablets() {
+        return titlesOfTablets;
     }
 
     @Override

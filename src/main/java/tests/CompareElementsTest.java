@@ -24,13 +24,16 @@ public class CompareElementsTest extends BaseTest {
 
     @Test
     public void compareElements() throws InterruptedException {
-        ArrayList<String> titlesFromTablets = tabletsPage.addTabletsToCompare(1, 2);
+        tabletsPage.addTabletsToCompare(1, 2);
+
+        ArrayList<String> titlesFromTablets = tabletsPage.getTitlesOfTablets();
         ArrayList<String> titlesFromCompare = comparePage.getTabletsFromCompare();
 
         Assert.assertTrue(titlesFromCompare.containsAll(titlesFromTablets));
 
+        comparePage.delete();
 
-        Assert.assertTrue(comparePage.delete().contains("Товаров нет"));
+        Assert.assertTrue(comparePage.getElementsAfterDelete().contains("Товаров нет"));
     }
 
 }

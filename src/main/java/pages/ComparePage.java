@@ -28,8 +28,12 @@ public class ComparePage extends BasePage {
     }
 
 
-    public String delete() throws InterruptedException {
+    public void delete() {
         clickByElement(DELETE_ELEMENTS);
+
+    }
+
+    public String getElementsAfterDelete() throws InterruptedException {
         Thread.sleep(1000);
 
         return getText(CONTENT);

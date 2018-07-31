@@ -24,10 +24,15 @@ public class SortedTest extends BaseTest {
 
     @Test
     public void sortingCheck() throws InterruptedException {
-        ArrayList<String> sortedElements = tabletsPage.sortedTablets();
+
+        tabletsPage.sortedTablets();
+
+        ArrayList<String> sortedElements = tabletsPage.getSortedTablets();
         String linkFromSortedTablets = tabletsPage.getCurrentURL();
 
-        ArrayList<String> reverseSortedElements = tabletsPage.sortedTablets();
+        tabletsPage.sortedTablets();
+
+        ArrayList<String> reverseSortedElements = tabletsPage.getSortedTablets();
         String linkReverseSortedTablets = tabletsPage.getCurrentURL();
 
         Assert.assertTrue(tabletsPage.compareSortedTablets(sortedElements));
