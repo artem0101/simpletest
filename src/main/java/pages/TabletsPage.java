@@ -68,7 +68,7 @@ public class TabletsPage extends BasePage {
         return true;
     }
 
-    public void addTabletsToCompare(int i, int j) {
+    public void addTabletsForCompare(int i, int j) {
         ArrayList<WebElement> addToCompareButtons = returnContainsElement(BUTTON_COMPARE);
 
         clickByElement(addToCompareButtons.get(i - 1));

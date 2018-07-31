@@ -24,7 +24,7 @@ public class CompareElementsTest extends BaseTest {
 
     @Test
     public void compareElements() throws InterruptedException {
-        tabletsPage.addTabletsToCompare(1, 2);
+        tabletsPage.addTabletsForCompare(1, 2);
 
         ArrayList<String> titlesFromTablets = tabletsPage.getTitlesOfTablets();
         ArrayList<String> titlesFromCompare = comparePage.getTabletsFromCompare();
