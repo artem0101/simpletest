@@ -33,18 +33,18 @@ public class TabletsPage extends BasePage {
         return countElements(COUNTAINS_ELEMENT);
     }
 
-    public ArrayList<WebElement> sortedTablets() throws InterruptedException {
+    public ArrayList<String> sortedTablets() throws InterruptedException {
         clickByElement(LINK_OF_PRICE);
         Thread.sleep(10000);
 
-        return returnContainsElement(LABEL_OF_PRICE);
+        return getTextFromElements(LABEL_OF_PRICE);
     }
 
-    public boolean compareSortedTablets(ArrayList<WebElement> elements) {
+    public boolean compareSortedTablets(ArrayList<String> elements) {
         int[] arr = new int[elements.size()];
 
         for (int i = 0; i < elements.size(); i++) {
-            arr[i] = Integer.parseInt(elements.get(i).getText().replaceAll("[\\s\u20BD]", ""));
+            arr[i] = Integer.parseInt(elements.get(i).replaceAll("[\\s\u20BD]", ""));
         }
 
         for (int i = 1; i < arr.length; i++) {
