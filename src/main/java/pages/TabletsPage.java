@@ -54,7 +54,7 @@ public class TabletsPage extends BasePage {
         int[] arr = new int[elements.size()];
 
         for (int i = 0; i < elements.size(); i++) {
-            arr[i] = Integer.parseInt(elements.get(i).replaceAll("[\\s\u20BD]", ""));
+            arr[i] = Integer.parseInt(elements.get(i).replaceAll("[от \\s \u20BD]", ""));
         }
 
         for (int i = 1; i < arr.length; i++) {
