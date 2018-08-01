@@ -4,7 +4,7 @@
 
     <test name="Regression1">
         <classes>
-            <class name="tests.SearchTest"/>
+            <!--<class name="tests.SearchTest"/>-->
             <!--<class name="tests.CompareMoreTest"/>-->
             <class name="tests.CompareElementsTest"/>
             <class name="tests.SearchInMarketTest"/>
