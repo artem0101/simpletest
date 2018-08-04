@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1">
+
+    <test name="SearchTest">
+        <classes>
+            <class name="tests.SearchTest"/>
+        </classes>
+    </test>
+    <test name="CompareMoreTest">
+        <classes>
+            <class name="tests.CompareMoreTest"/>
+        </classes>
+    </test>
+    <test name="CompareElementsTest">
+        <classes>
+            <class name="tests.CompareElementsTest"/>
+        </classes>
+    </test>
+    <test name="SearchInMarketTest">
+        <classes>
+            <class name="tests.SearchInMarketTest"/>
+        </classes>
+    </test>
+    <test name="SortedTest">
+        <classes>
+            <class name="tests.SortedTest"/>
+        </classes>
+    </test>
+    <test name="TransitionTest">
+        <classes>
+            <class name="tests.TransitionTest"/>
+        </classes>
+    </test>
+    <!--<suite-files>-->
+    <!--<suite-file path="search.xml"/>-->
+    <!--<suite-file path="compare-more.xml"/>-->
+    <!--<suite-file path="search-in-market.xml"/>-->
+    <!--<suite-file path="sorted.xml"/>-->
+    <!--<suite-file path="compare-elements-test.xml"/>-->
+    <!--<suite-file path="transition.xml"/>-->
+    <!--</suite-files>-->
+</suite>
