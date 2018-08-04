@@ -7,29 +7,29 @@
             <class name="tests.SearchTest"/>
         </classes>
     </test>
-    <!--<test name="CompareMoreTest">-->
-        <!--<classes>-->
-            <!--<class name="tests.CompareMoreTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="CompareElementsTest">-->
-        <!--<classes>-->
-            <!--<class name="tests.CompareElementsTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="SearchInMarketTest">-->
-        <!--<classes>-->
-            <!--<class name="tests.SearchInMarketTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="SortedTest">-->
-        <!--<classes>-->
-            <!--<class name="tests.SortedTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="TransitionTest">-->
-        <!--<classes>-->
-            <!--<class name="tests.TransitionTest"/>-->
-        <!--</classes>-->
-    <!--</test>-->
+    <test name="CompareMoreTest">
+        <classes>
+            <class name="tests.CompareMoreTest"/>
+        </classes>
+    </test>
+    <test name="CompareElementsTest">
+        <classes>
+            <class name="tests.CompareElementsTest"/>
+        </classes>
+    </test>
+    <test name="SearchInMarketTest">
+        <classes>
+            <class name="tests.SearchInMarketTest"/>
+        </classes>
+    </test>
+    <test name="SortedTest">
+        <classes>
+            <class name="tests.SortedTest"/>
+        </classes>
+    </test>
+    <test name="TransitionTest">
+        <classes>
+            <class name="tests.TransitionTest"/>
+        </classes>
+    </test>
 </suite>
