@@ -11,19 +11,13 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.uncommons.reportng.HTMLReporter;
-
-
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Author: Sergey Kuts
- * Date: 9/17/13
- * Time: 6:49 PM
- */
+
 public class BaseHTMLReporter extends HTMLReporter implements ITestListener {
     public static final String DRIVER_ATTRIBUTE = "driver";
     private static final String UTILS_KEY = "utils";

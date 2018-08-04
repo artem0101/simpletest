@@ -24,14 +24,12 @@ public class TabletsPage extends BasePage {
         super(driver);
     }
 
-
     public void changeCountOfDisplayedTablets(String value)  {
         scroll(LISTBOX_BUTTON);
         clickByElement(LISTBOX_BUTTON);
 
         select(SELECT_CONTROL, value);
     }
-
 
     public int getCountTablets() throws InterruptedException {
         Thread.sleep(10000);
@@ -76,7 +74,6 @@ public class TabletsPage extends BasePage {
 
         titlesOfTablets.add(returnContainsElement(TITLE_LIST).get(i - 1).getText());
         titlesOfTablets.add(returnContainsElement(TITLE_LIST).get(j - 1).getText());
-
 
         clickByElement(BUTTON_TO_COMPARE);
     }

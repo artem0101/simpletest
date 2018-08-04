@@ -2,12 +2,8 @@ package utils;
 
 import org.testng.ITestResult;
 import org.uncommons.reportng.ReportNGUtils;
-
 import java.util.List;
 
-/**
- * Author: Serhii Kuts
- */
 public class ReportUtils extends ReportNGUtils {
     public List<String> getTestOutput(final ITestResult result) {
         final List<String> output = super.getTestOutput(result);

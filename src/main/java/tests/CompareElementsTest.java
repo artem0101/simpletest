@@ -6,7 +6,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.ComparePage;
 import pages.TabletsPage;
-
 import java.util.ArrayList;
 
 public class CompareElementsTest extends BaseTest {
